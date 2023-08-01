@@ -10,7 +10,7 @@ import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -67,16 +67,16 @@ const Cart = () => {
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
-                  <h4>${item.price}</h4>
+                  <h4> <span className='price-logo'>₹</span> {item.price}</h4>
                 </div>
                 <div className="flex bottom">
                   <div>
                   <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
+                    <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec') }>
                     <AiOutlineMinus />
                     </span>
                     <span className="num" onClick="">{item.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AiOutlinePlus /></span>
+                    <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc') }><AiOutlinePlus /></span>
                   </p>
                   </div>
                   <button
@@ -95,7 +95,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal:</h3>
-              <h3>${totalPrice}</h3>
+              <h3> <span className='price-logo'>₹</span> {totalPrice}</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>

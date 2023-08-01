@@ -641,6 +641,9 @@ margin-top: 160px;
 .product-max-qty{
   margin-top: 10px;
 }
+.cart-wrapper{
+  user-select: none;
+}
 
 @media screen and (max-width:800px) {
   .hero-banner-container{

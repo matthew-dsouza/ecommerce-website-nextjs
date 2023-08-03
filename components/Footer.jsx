@@ -1,14 +1,30 @@
+import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin} from 'react-icons/ai';
+import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>© 2022 WaveKnox Electronics</p>
+      <Link href="https://matthewdsouza.vercel.app">
+        <a target={'_blank'} className='shoutout'>Built by Matthew Dsouza</a>
+      </Link>
       <p className="icons">
-        <AiFillGithub />
-        <AiOutlineTwitter />
-        <AiFillLinkedin/>
+
+        <Link href="https://github.com/matthew-dsouza">
+          <a target="_blank">
+            <AiFillGithub />
+          </a>
+        </Link>
+        <Link href="https://twitter.com/mxtthxwdsxxzx">
+          <a target="_blank">
+            <AiOutlineTwitter />
+          </a>
+        </Link>
+        <Link href="https://www.linkedin.com/in/matthew-dsouza">
+          <a target="_blank">
+            <AiFillLinkedin />
+          </a>
+        </Link>
       </p>
     </div>
   )

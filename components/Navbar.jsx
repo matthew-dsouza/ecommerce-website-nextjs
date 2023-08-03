@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineShopping } from 'react-icons/ai'
+import { AiOutlineShopping } from 'react-icons/ai';
+import Image from 'next/image'
+import logo from '../public/logo.png';
 
 import { Cart } from './';
-import { useStateContext} from '../context/StateContext';
+import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -11,7 +13,9 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">WaveKnox Electronics</Link>
+        <Link href="/">
+            <Image src={logo} alt="website logo" className='logo-image' />
+        </Link>
       </p>
 
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>

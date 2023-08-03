@@ -18,7 +18,7 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
           <h3>{midText}</h3>
           <p>{desc}</p>
           <Link href={`/product/${product}`}>
-            <button type="button">{buttonText}</button>
+            <button type="button" className='footer-banner-button'>{buttonText}</button>
           </Link>
         </div>
 

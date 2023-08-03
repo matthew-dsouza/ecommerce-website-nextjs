@@ -14,6 +14,7 @@ body, * {
 a {
   color: inherit;
   text-decoration: none;
+  color: #0d6efd;
 }
 
 .main-container{
@@ -65,14 +66,18 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: gray;
-  font-size: 18px;
-  font-weight: 600;
-  font-style:italic;
-
+width: 20vw;
+height: auto;
+}
+.logo-image{
+  width: 100%;
+  height: 100%;
 }
 .cart-icon{
-  font-size: 25px;
+  font-size: 3vw;
+}
+.cart-icon{
+  /* font-size: 25px; */
   color: gray;
   cursor: pointer;
   position: relative;
@@ -86,11 +91,11 @@ width: 100%;
 .cart-item-qty{
   position: absolute;
   right: -8px;
-  font-size: 12px;
+  font-size: 1.2vw;
   color: #eee;
   background-color: #f02d34;
-  width: 18px;
-  height: 18px;
+  width: 1.5vw;
+  height: 1.5vw;
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
@@ -131,7 +136,7 @@ width: 100%;
 }
 
 .hero-banner-container{
-  padding: 100px 40px;
+  padding: 100px 2rem;
   background-color: #dcdcdc;
   border-radius: 15px;
   position: relative;
@@ -143,7 +148,7 @@ width: 100%;
 .hero-banner-container .beats-solo{
   font-size: 20px;
 }
-.hero-banner-container button{
+.hero-banner-button{
    border-radius: 15px;
   padding: 10px 16px;
   background-color: #f02d34;
@@ -163,13 +168,15 @@ width: 100%;
 .hero-banner-container h1{
   color: white;
   font-size: 10em;
-  margin-left: -20px;
   text-transform: uppercase;
+}
+.hero-banner-image-container{
+  width: 100%;
 }
 .hero-banner-image{
   position: absolute;
-  top: 0%;
-  right:20%;
+  top: 3%;
+  left: 45vw;
   width: 450px;
   height: 450px;
 }
@@ -183,11 +190,13 @@ width: 300px;
 line-height: 1.3;
 display: flex;
 flex-direction: column;
- color: #324d67;
-
+ color: #fff;
+ background-color: #4a4a4aa5;
+padding: 10px;
+border-radius: 1rem;
 }
 .desc p{
-  color: #5f5f5f;
+  color: #fff;
   font-weight: 100;
 text-align: end;
 }
@@ -222,12 +231,17 @@ text-align: end;
   color: white;
   width: 100%;
   margin-top: 120px;
+  z-index: -2;
+}
+.footer-image-container{
+  z-index: -1;
 }
 .banner-desc{
   display: flex ;
   justify-content: space-between;
+  gap: 4rem;
 }
-.banner-desc button{
+.footer-banner-button{
   border-radius: 15px;
   padding: 10px 16px;
   background-color: white;
@@ -241,10 +255,10 @@ text-align: end;
 .banner-desc .left h3{
   font-weight: 900;
   font-size: 80px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 .banner-desc .left p{
-  margin:18px;
+  /* margin:18px; */
 }
 .footer-banner-image{
   position: absolute;
@@ -253,7 +267,7 @@ text-align: end;
   width: 35vw;
   height: auto;
   top: -25%;
-  left: 25%;
+  left: 50vw;
 }
 .banner-desc .right{
   line-height: 1.4;
@@ -291,7 +305,7 @@ text-align: end;
 }
 
 .footer-container{
-  color: #324d67;
+  /* color: #324d67; */
   text-align: center;
   margin-top: 20px;
   padding: 30px 10px;
@@ -646,7 +660,12 @@ margin-top: 160px;
   user-select: none;
 }
 
-@media screen and (max-width:800px) {
+.shoutout{
+  font-weight: 400;
+}
+
+/* MOBILES AND TABLETS ONLY */
+@media screen and (max-width:1023px) {
   .hero-banner-container{
     height: 560px;
   }
@@ -657,7 +676,7 @@ margin-top: 160px;
     right: -6%;
   }
   .footer-banner-container{
-    height: 560px;
+    height: 80vh;
     margin-top: 80px;
   }
   .footer-image-container{
@@ -669,14 +688,17 @@ margin-top: 160px;
     left: 30%;
     top: 6%;
   }
+  .banner-desc{
+    gap: 7vh;
+  }
   .banner-desc .left h3{
     font-weight: 900;
     font-size: 50px;
-    margin-left: 5px;
+    /* margin-left: 5px; */
   }
-  .banner-desc .left p{
+  /* .banner-desc .left p{
     margin:18px;
-  }
+  } */
   .banner-desc .right h3{
     font-size: 45px;
   }
@@ -688,7 +710,7 @@ margin-top: 160px;
   }
   .banner-desc{
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 20px; */
   }
   .hero-banner-container{
     line-height: 1.3;
@@ -699,8 +721,8 @@ margin-top: 160px;
  .hero-banner-container h3{
     font-size: 40px;
   }
-  .hero-banner-container button{
-    margin-top: 90px;
+  .hero-banner-button{
+    /* margin-top: 90px; */
     z-index: 10000;
   }
   .desc{
@@ -791,4 +813,37 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+
+
+ .logo{
+width: 35vw;
+ }
+ .cart-icon{
+  font-size: 6vw;
+ }
+ .navbar-container{
+  margin: 0 1rem 1rem 0.5rem;
+ }
+ .cart-item-qty{
+  width: 4vw;
+  height: 4vw;
+  font-size: 3.3vw;
+ }
+ .hero-banner-container{
+  z-index: -1;
+ }
+ .hero-banner-image{
+  left: 25vw;
+  top: 3%;
+  z-index: -2;
+ }
+ .hero-banner-button{
+  margin-top: 5rem;
+ }
+ .footer-banner-button{
+  margin-top: 1rem;
+ }
+ .shoutout{
+  font-weight: 400;
+ }
 }

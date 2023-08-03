@@ -1,4 +1,4 @@
-# Build and Deploy a Modern Full Stack ECommerce React Application with Stripe
+# Modern Full Stack ECommerce React Application with Stripe
 
 ![Project Banner](project_banner.png)
 

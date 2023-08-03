@@ -1,4 +1,4 @@
-# Modern Full Stack ECommerce React Application with Stripe
+# Modern ECommerce Nextjs Application with Stripe
 
 ![Project Banner](project_banner.png)
 
